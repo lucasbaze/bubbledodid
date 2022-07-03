@@ -1,7 +1,9 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { Bubble } from '@dodid/feature/bubble';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import { Text } from '@chakra-ui/react';
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +15,11 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <h1 className={styles.title}>Welcome to Bubbledodid</h1>
+        <Text as="h1" fontSize="7xl">
           Welcome to Bubbledodid
-        </h1>
+        </Text>
+        <Bubble />
       </main>
 
       <footer className={styles.footer}>
@@ -31,7 +35,7 @@ const Home: NextPage = () => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
